@@ -4,17 +4,17 @@ import client from '../apollo-graphql/apolloClient'
 import { getLaunches } from '../graphql-queries/graphqlQueries'
 import { data } from 'autoprefixer'
 import { generateKey } from '../utils/utils'
-import { LaunchType, RocketType } from '../types/types'
+import { LaunchesType, RocketType } from '../types/types'
 import Rocket from '@/components/Rocket'
 import Link from 'next/link'
 export default async function Home() {
   const dataFromApi = await getDataFromApi()
-  console.log(dataFromApi.data.launches[0].rocket)
+
   const allLaunches = dataFromApi.data.launches
   return (
     <div>
       <div>
-        {allLaunches.map((launch: LaunchType) => (
+        {allLaunches.map((launch: LaunchesType) => (
           <>
             <Link href={`/launches/${launch.id}`}>
               <h1 key={launch.id || generateKey()}>{launch.id}</h1>

@@ -1,9 +1,14 @@
-type LaunchType = {
+type LaunchesType = {
   typename?: String
   id?: string
   launch_success?: Boolean
   launch_year?: string
   rocket?: RocketType
+}
+type LaunchType = {
+  id?: string
+  mission_name?: string
+  launch_success?: Boolean
 }
 type RocketType = {
   __typename?: String
@@ -25,4 +30,4 @@ type EngineType = {
   number: Number
   propellant_1: string
 }
-export type { LaunchType, RocketType }
+export type { LaunchesType, RocketType, LaunchType }
