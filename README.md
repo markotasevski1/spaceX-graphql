@@ -7,9 +7,9 @@ Im using [spaceX graphql API](https://studio.apollographql.com/public/SpaceX-pxx
 
 ### Description
 
-This project will have page where we fetch all launches from spaceX on server using server side componens, for each launch app creates dynamic page that has more informations and details about that launch
+In this project, we'll implement a feature where we fetch information about all SpaceX launches from their API. This will be done on server using server components. For each launch, the application will dynamically create a dedicated page that provides more comprehensive details and information specific to that particular launch.
 
 
 ### Contribute
 
-If anyone have ideas or their own API open an issue on this repository
+Feel free to open an issue if you have ideas or are interested in contributing to this project! 
