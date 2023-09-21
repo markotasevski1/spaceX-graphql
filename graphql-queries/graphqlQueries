@@ -1,0 +1,41 @@
+const getIneerRocketType = ` rocket {
+    company
+    country
+    description
+    engines {
+      layout
+      number
+      propellant_1
+    }
+  }`
+const getRocket = ` rocket {
+        rocket_name
+        rocket_type
+        fairings {
+          reused
+        }
+        ${getIneerRocketType}
+      }
+  `
+const getLaunches = `query SecondQuery {
+    launches {
+      id
+      launch_site {
+        site_name
+      }
+      launch_success
+      ${getRocket}
+    }
+  }
+  
+`
+const getSingleLaunch = `query SecondQuery($launchId: ID!){
+    launch(id: $launchId) {
+      id
+      mission_name
+      launch_success
+    }
+  }
+  `
+
+export { getLaunches, getSingleLaunch, getRocket }
